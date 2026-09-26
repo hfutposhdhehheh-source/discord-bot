@@ -1,3 +1,4 @@
+import os
 import nextcord
 from nextcord.ext import commands
 import datetime
@@ -148,5 +149,5 @@ async def on_command_error(ctx, error):
     else:
         print(f"⚠️ เกิดข้อผิดพลาด: {error}")
 
-bot.run("MTU1MDQ5MjQ5NjYyMDk0NTQwOA.GPKAp9.in9fnbAkgH-OPgZ4iEcd2jGw3Zb6FGHIdPio6U")
-  
+# ดึง Token จาก Environment Variables ของ Render อย่างปลอดภัย
+bot.run(os.getenv("TOKEN"))
